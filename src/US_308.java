@@ -14,12 +14,12 @@ public class US_308 extends BaseDriver {
         driver.get("https://www.e-junkie.com/ ");
         MyFunc.Bekle(2);
 
-       // Assert.assertTrue(" Yanlış Url ", driver.getCurrentUrl().equals("https://www.e-junkie.com/"));
 
         WebElement SeeHowWorks=driver.findElement(By.xpath("//a[@class='blue_btn']"));
         SeeHowWorks.click();
         MyFunc.Bekle(2);
 
+        Assert.assertTrue( driver.getCurrentUrl().equals("https://www.e-junkie.com/")," Yanlış Url ");
 
         MyFunc.Bekle(5);
         JavascriptExecutor js = (JavascriptExecutor) driver;
